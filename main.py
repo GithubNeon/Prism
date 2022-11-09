@@ -13,15 +13,15 @@ intents=nextcord.Intents.all()
 
 bot=commands.Bot(intents=intents)
 
-for filename in os.listdir("./server"):
+for filename in os.listdir("./Server"):
     if filename.endswith(".py"):
-        bot.load_extension(f"server.{filename[:-3]}")
-for filename in os.listdir("./service"):
+        bot.load_extension(f"Server.{filename[:-3]}")
+for filename in os.listdir("./Service"):
     if filename.endswith(".py"):
-        bot.load_extension(f"service.{filename[:-3]}")
-for filename in os.listdir("./util"):
+        bot.load_extension(f"Service.{filename[:-3]}")
+for filename in os.listdir("./Util"):
     if filename.endswith(".py"):
-        bot.load_extension(f"util.{filename[:-3]}")
+        bot.load_extension(f"Util.{filename[:-3]}")
 
 @bot.event
 async def on_ready():
